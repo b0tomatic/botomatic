@@ -3,7 +3,7 @@ const { join } = require('path');
 
 module.exports = {
   output: {
-    path: join(__dirname, '../../dist/apps/server'),
+    path: join(__dirname, '../../dist/apps/server')
   },
   plugins: [
     new NxAppWebpackPlugin({
@@ -14,6 +14,11 @@ module.exports = {
       assets: ['./src/assets'],
       optimization: false,
       outputHashing: 'none',
-    }),
-  ],
+      transformers: [{
+        name: '@nestjs/graphql/plugin', options: {
+          introspectComments: true
+        }
+      }]
+    })
+  ]
 };
