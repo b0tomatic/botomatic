@@ -3,20 +3,21 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
-import { UsersModule } from '../users/users.module';
+import { UsersModule } from './users/users.module';
 import { join, dirname } from 'node:path';
-
-const __dirname = dirname(__filename);
+import * as process from 'node:process';
 
 @Module({
   imports: [
     UsersModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      // TODO: autoSchemaFile - generate in the right place
-      // autoSchemaFile: true,
-      autoSchemaFile: join(__dirname, 'src/schema.gql'),
-      sortSchema: true
+      typePaths: ['./**/*.graphql'],
+      autoSchemaFile: true
+      // autoSchemaFile: join(process.env.NODE_ENV === 'production'
+      //   ? process.cwd()
+      //   : `${process.env.NX_WORKSPACE_ROOT}/apps/server`, 'src/schema.gql'),
+      // sortSchema: true
       // playground: true,
       // plugins: [ApolloServerPluginLandingPageLocalDefault()]
     })
