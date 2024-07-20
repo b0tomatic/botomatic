@@ -5,12 +5,25 @@
   "projectType": "application",
   "tags": [],
   "targets": {
-    "serve": {
+    "schema": {
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "server:build"
+        "args": ["--generate-schema"],
+        "watch": false
       },
+      "configurations": {
+        "development": {
+          "buildTarget": "server:build:development"
+        },
+        "production": {
+          "buildTarget": "server:build:production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
       "configurations": {
         "development": {
           "buildTarget": "server:build:development"

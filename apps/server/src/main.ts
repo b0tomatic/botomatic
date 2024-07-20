@@ -6,14 +6,16 @@
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 
-import { AppModule } from './app/app.module';
-import { GraphQLSchemaBuilderModule, GraphQLSchemaFactory, GraphQLSchemaHost } from '@nestjs/graphql';
+import { RootModule } from '@botomatic/schematics';
+import { GraphQLSchemaHost } from '@nestjs/graphql';
+import { printSchema } from 'graphql/index';
 import { join } from 'path';
 import fs from 'fs';
-import { printSchema } from 'graphql/index';
+import * as process from 'node:process';
 
-async function generateSchema() {
-  const app = await NestFactory.create(AppModule);
+
+export async function generateSchema() {
+  const app = await NestFactory.create(RootModule);
   await app.init(); // Ensure the application is fully initialized
 
   const { schema } = app.get(GraphQLSchemaHost);
@@ -23,10 +25,12 @@ async function generateSchema() {
   fs.writeFileSync(schemaPath, schemaSDL);
 
   await app.close();
+
+  return schemaPath;
 }
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(RootModule);
   app.enableCors();
 
   const port = process.env.PORT || 3000;
@@ -37,6 +41,15 @@ async function bootstrap() {
   );
 }
 
-bootstrap()
+if (process.argv.includes('--generate-schema')) {
+  generateSchema().then((schemaPath) => {
+    console.log(`Schema generated at: ${schemaPath}`);
+    process.exit(0);
+  }).catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
+} else {
+  bootstrap();
+}
 
-// generateSchema()

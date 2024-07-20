@@ -23,4 +23,6 @@ export class User {
    */
   firstName?: string;
   lastName?: string;
+  @Field(() => Int, { description: 'Example field (placeholder)' })
+  exampleField!: number;
 }

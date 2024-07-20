@@ -2,10 +2,9 @@ import './app.module.scss';
 
 import NxWelcome from './nx-welcome';
 import { gql, useQuery } from '@apollo/client';
-import { User } from '@botomatic/models';
-import { graphql, useFragment } from '../__generated__';
+import { GetUserrs, User } from '../__generated__/graphql';
 
-const USER_QUERY = graphql(`query getUser {
+const USER_QUERY = gql`query getUser {
   user(id: 1) {
     ...part
   }
@@ -14,12 +13,11 @@ const USER_QUERY = graphql(`query getUser {
 fragment part on User {
   id
   firstName
-}`);
+  exampleField
+}`;
 
 export function App() {
-  const { data } = useQuery<User>(USER_QUERY);
-
-  console.log(data);
+  const { data } = useQuery<GetUserrs>(USER_QUERY);
 
   return (
     <div>
