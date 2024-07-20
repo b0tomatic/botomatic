@@ -5,13 +5,6 @@
   "projectType": "application",
   "tags": [],
   "targets": {
-    "codegen": {
-      "executor": "nx:run-commands",
-      "options": {
-        "cwd": "./",
-        "command": "ts-node apps/server/generate-typings"
-      }
-    },
     "serve": {
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
