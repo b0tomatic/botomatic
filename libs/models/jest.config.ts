@@ -1,11 +1,11 @@
 /* eslint-disable */
 export default {
-  displayName: 'gql',
+  displayName: 'models',
   preset: '../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/libs/gql',
+  coverageDirectory: '../../coverage/libs/models',
 };

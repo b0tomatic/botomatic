@@ -1,17 +1,18 @@
-import { CodegenConfig } from "@graphql-codegen/cli";
+import { CodegenConfig } from '@graphql-codegen/cli';
 
+const autoSchemaFile = 'libs/generated/graphql/src/assets/schema.graphql';
 const config: CodegenConfig = {
-  schema: "http://localhost:3000",
-  documents: ["src/**/*.tsx"],
+  schema: autoSchemaFile, // "http://localhost:3000/graphql",
+  documents: ['apps/client/src/**/*.tsx'],
   generates: {
-    "./src/__generated__/": {
-      preset: "client",
-      presetConfig: {
-        gqlTagName: "gql",
-      },
-    },
+    './apps/client/src/__generated__/': {
+      preset: 'client',
+      // presetConfig: {
+      //   gqlTagName: 'gql'
+      // }
+    }
   },
-  ignoreNoDocuments: true,
+  // ignoreNoDocuments: true
 };
 
 export default config;

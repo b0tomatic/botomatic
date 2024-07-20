@@ -1,0 +1,26 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: Float!
+
+  """`Introspected comment`"""
+  firstName: String
+  lastName: String
+}
+
+type Query {
+  user(id: Int!): User!
+  search: [ResultUnion!]!
+}
+
+union ResultUnion = Author | Book
+
+type Author {
+  name: String!
+}
+
+type Book {
+  title: String!
+}

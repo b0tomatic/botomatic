@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tg-startup/gql": ["libs/gql/src/index.ts"]
+      "@botomatic/graphql": ["libs/generated/graphql/src/index.ts"],
+      "@botomatic/models": ["libs/models/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -5,7 +5,8 @@ import * as ReactDOM from 'react-dom/client';
 import App from './app/app';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:3000/',
+  uri: 'http://localhost:3000/graphql',
+  typeDefs: ['libs/graphql/**/*.graphql'],
   cache: new InMemoryCache()
 });
 

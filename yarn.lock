@@ -2678,6 +2678,111 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@botomatic/source@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@botomatic/source@workspace:."
+  dependencies:
+    "@angular-devkit/build-angular": "npm:^18.1.0"
+    "@angular-devkit/core": "npm:^18.1.0"
+    "@angular-devkit/schematics": "npm:^18.1.0"
+    "@angular-eslint/eslint-plugin": "npm:^18.1.0"
+    "@angular-eslint/eslint-plugin-template": "npm:^18.1.0"
+    "@angular-eslint/template-parser": "npm:^18.1.0"
+    "@angular/animations": "npm:^18.1.0"
+    "@angular/cli": "npm:^18.1.0"
+    "@angular/common": "npm:^18.1.0"
+    "@angular/compiler": "npm:^18.1.0"
+    "@angular/compiler-cli": "npm:^18.1.0"
+    "@angular/core": "npm:^18.1.0"
+    "@angular/forms": "npm:^18.1.0"
+    "@angular/language-service": "npm:^18.1.0"
+    "@angular/platform-browser": "npm:^18.1.0"
+    "@angular/platform-browser-dynamic": "npm:^18.1.0"
+    "@angular/platform-server": "npm:^18.1.0"
+    "@angular/router": "npm:^18.1.0"
+    "@angular/ssr": "npm:^18.1.0"
+    "@apollo/client": "npm:^3.10.8"
+    "@apollo/server": "npm:^4.10.4"
+    "@graphql-codegen/cli": "npm:5.0.2"
+    "@graphql-codegen/client-preset": "npm:4.3.2"
+    "@nestjs/apollo": "npm:^12.2.0"
+    "@nestjs/common": "npm:^10.0.2"
+    "@nestjs/core": "npm:^10.0.2"
+    "@nestjs/graphql": "npm:^12.2.0"
+    "@nestjs/platform-express": "npm:^10.0.2"
+    "@nestjs/schematics": "npm:^10.0.1"
+    "@nestjs/testing": "npm:^10.0.2"
+    "@nx/angular": "npm:19.4.3"
+    "@nx/cypress": "npm:19.4.3"
+    "@nx/devkit": "npm:19.4.3"
+    "@nx/eslint": "npm:19.4.3"
+    "@nx/eslint-plugin": "npm:19.4.3"
+    "@nx/jest": "npm:19.4.3"
+    "@nx/js": "npm:19.4.3"
+    "@nx/nest": "npm:19.4.3"
+    "@nx/node": "npm:19.4.3"
+    "@nx/playwright": "npm:19.4.3"
+    "@nx/react": "npm:^19.4.3"
+    "@nx/vite": "npm:19.4.3"
+    "@nx/web": "npm:19.4.3"
+    "@nx/webpack": "npm:19.4.3"
+    "@nx/workspace": "npm:19.4.3"
+    "@parcel/watcher": "npm:^2.4.1"
+    "@playwright/test": "npm:^1.36.0"
+    "@schematics/angular": "npm:^18.1.0"
+    "@swc-node/register": "npm:~1.9.1"
+    "@swc/cli": "npm:~0.3.12"
+    "@swc/core": "npm:~1.5.7"
+    "@swc/helpers": "npm:~0.5.11"
+    "@testing-library/react": "npm:15.0.6"
+    "@types/express": "npm:4.17.14"
+    "@types/jest": "npm:^29.4.0"
+    "@types/node": "npm:18.16.9"
+    "@types/react": "npm:18.3.1"
+    "@types/react-dom": "npm:18.3.0"
+    "@typescript-eslint/eslint-plugin": "npm:^7.3.0"
+    "@typescript-eslint/parser": "npm:^7.3.0"
+    "@typescript-eslint/utils": "npm:^8.0.0-alpha.28"
+    "@vitejs/plugin-react": "npm:^4.2.0"
+    "@vitest/ui": "npm:^1.3.1"
+    axios: "npm:^1.6.0"
+    babel-jest: "npm:^29.4.1"
+    browser-sync: "npm:^3.0.0"
+    cypress: "npm:^13.13.0"
+    eslint: "npm:~8.57.0"
+    eslint-config-prettier: "npm:^9.0.0"
+    eslint-plugin-cypress: "npm:^2.13.4"
+    eslint-plugin-import: "npm:2.27.5"
+    eslint-plugin-jsx-a11y: "npm:6.7.1"
+    eslint-plugin-playwright: "npm:^0.15.3"
+    eslint-plugin-react: "npm:7.32.2"
+    eslint-plugin-react-hooks: "npm:4.6.0"
+    express: "npm:^4.19.2"
+    graphql: "npm:^16.9.0"
+    jest: "npm:^29.4.1"
+    jest-environment-jsdom: "npm:^29.4.1"
+    jest-environment-node: "npm:^29.4.1"
+    jest-preset-angular: "npm:~14.1.0"
+    jsdom: "npm:~22.1.0"
+    nx: "npm:19.4.3"
+    prettier: "npm:^2.6.2"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    reflect-metadata: "npm:^0.1.13"
+    rxjs: "npm:~7.8.0"
+    sass: "npm:^1.55.0"
+    ts-jest: "npm:^29.1.0"
+    ts-morph: "npm:^23.0.0"
+    ts-node: "npm:10.9.1"
+    tslib: "npm:^2.3.0"
+    typescript: "npm:~5.4.2"
+    vite: "npm:^5.0.0"
+    vitest: "npm:^1.3.1"
+    webpack-cli: "npm:^5.1.4"
+    zone.js: "npm:~0.14.3"
+  languageName: unknown
+  linkType: soft
+
 "@colors/colors@npm:1.5.0":
   version: 1.5.0
   resolution: "@colors/colors@npm:1.5.0"
@@ -3113,7 +3218,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/cli@npm:^5.0.2":
+"@graphql-codegen/cli@npm:5.0.2":
   version: 5.0.2
   resolution: "@graphql-codegen/cli@npm:5.0.2"
   dependencies:
@@ -3167,7 +3272,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/client-preset@npm:^4.2.2, @graphql-codegen/client-preset@npm:^4.3.2":
+"@graphql-codegen/client-preset@npm:4.3.2, @graphql-codegen/client-preset@npm:^4.2.2":
   version: 4.3.2
   resolution: "@graphql-codegen/client-preset@npm:4.3.2"
   dependencies:
@@ -5351,6 +5456,140 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@parcel/watcher-android-arm64@npm:2.4.1":
+  version: 2.4.1
+  resolution: "@parcel/watcher-android-arm64@npm:2.4.1"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-darwin-arm64@npm:2.4.1":
+  version: 2.4.1
+  resolution: "@parcel/watcher-darwin-arm64@npm:2.4.1"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-darwin-x64@npm:2.4.1":
+  version: 2.4.1
+  resolution: "@parcel/watcher-darwin-x64@npm:2.4.1"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-freebsd-x64@npm:2.4.1":
+  version: 2.4.1
+  resolution: "@parcel/watcher-freebsd-x64@npm:2.4.1"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-linux-arm-glibc@npm:2.4.1":
+  version: 2.4.1
+  resolution: "@parcel/watcher-linux-arm-glibc@npm:2.4.1"
+  conditions: os=linux & cpu=arm & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-linux-arm64-glibc@npm:2.4.1":
+  version: 2.4.1
+  resolution: "@parcel/watcher-linux-arm64-glibc@npm:2.4.1"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-linux-arm64-musl@npm:2.4.1":
+  version: 2.4.1
+  resolution: "@parcel/watcher-linux-arm64-musl@npm:2.4.1"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-linux-x64-glibc@npm:2.4.1":
+  version: 2.4.1
+  resolution: "@parcel/watcher-linux-x64-glibc@npm:2.4.1"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-linux-x64-musl@npm:2.4.1":
+  version: 2.4.1
+  resolution: "@parcel/watcher-linux-x64-musl@npm:2.4.1"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-win32-arm64@npm:2.4.1":
+  version: 2.4.1
+  resolution: "@parcel/watcher-win32-arm64@npm:2.4.1"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-win32-ia32@npm:2.4.1":
+  version: 2.4.1
+  resolution: "@parcel/watcher-win32-ia32@npm:2.4.1"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-win32-x64@npm:2.4.1":
+  version: 2.4.1
+  resolution: "@parcel/watcher-win32-x64@npm:2.4.1"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "@parcel/watcher@npm:2.4.1"
+  dependencies:
+    "@parcel/watcher-android-arm64": "npm:2.4.1"
+    "@parcel/watcher-darwin-arm64": "npm:2.4.1"
+    "@parcel/watcher-darwin-x64": "npm:2.4.1"
+    "@parcel/watcher-freebsd-x64": "npm:2.4.1"
+    "@parcel/watcher-linux-arm-glibc": "npm:2.4.1"
+    "@parcel/watcher-linux-arm64-glibc": "npm:2.4.1"
+    "@parcel/watcher-linux-arm64-musl": "npm:2.4.1"
+    "@parcel/watcher-linux-x64-glibc": "npm:2.4.1"
+    "@parcel/watcher-linux-x64-musl": "npm:2.4.1"
+    "@parcel/watcher-win32-arm64": "npm:2.4.1"
+    "@parcel/watcher-win32-ia32": "npm:2.4.1"
+    "@parcel/watcher-win32-x64": "npm:2.4.1"
+    detect-libc: "npm:^1.0.3"
+    is-glob: "npm:^4.0.3"
+    micromatch: "npm:^4.0.5"
+    node-addon-api: "npm:^7.0.0"
+    node-gyp: "npm:latest"
+  dependenciesMeta:
+    "@parcel/watcher-android-arm64":
+      optional: true
+    "@parcel/watcher-darwin-arm64":
+      optional: true
+    "@parcel/watcher-darwin-x64":
+      optional: true
+    "@parcel/watcher-freebsd-x64":
+      optional: true
+    "@parcel/watcher-linux-arm-glibc":
+      optional: true
+    "@parcel/watcher-linux-arm64-glibc":
+      optional: true
+    "@parcel/watcher-linux-arm64-musl":
+      optional: true
+    "@parcel/watcher-linux-x64-glibc":
+      optional: true
+    "@parcel/watcher-linux-x64-musl":
+      optional: true
+    "@parcel/watcher-win32-arm64":
+      optional: true
+    "@parcel/watcher-win32-ia32":
+      optional: true
+    "@parcel/watcher-win32-x64":
+      optional: true
+  checksum: 10c0/33b7112094b9eb46c234d824953967435b628d3d93a0553255e9910829b84cab3da870153c3a870c31db186dc58f3b2db81382fcaee3451438aeec4d786a6211
+  languageName: node
+  linkType: hard
+
 "@peculiar/asn1-schema@npm:^2.3.8":
   version: 2.3.8
   resolution: "@peculiar/asn1-schema@npm:2.3.8"
@@ -6248,108 +6487,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tg-startup/source@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@tg-startup/source@workspace:."
-  dependencies:
-    "@angular-devkit/build-angular": "npm:^18.1.0"
-    "@angular-devkit/core": "npm:^18.1.0"
-    "@angular-devkit/schematics": "npm:^18.1.0"
-    "@angular-eslint/eslint-plugin": "npm:^18.1.0"
-    "@angular-eslint/eslint-plugin-template": "npm:^18.1.0"
-    "@angular-eslint/template-parser": "npm:^18.1.0"
-    "@angular/animations": "npm:^18.1.0"
-    "@angular/cli": "npm:^18.1.0"
-    "@angular/common": "npm:^18.1.0"
-    "@angular/compiler": "npm:^18.1.0"
-    "@angular/compiler-cli": "npm:^18.1.0"
-    "@angular/core": "npm:^18.1.0"
-    "@angular/forms": "npm:^18.1.0"
-    "@angular/language-service": "npm:^18.1.0"
-    "@angular/platform-browser": "npm:^18.1.0"
-    "@angular/platform-browser-dynamic": "npm:^18.1.0"
-    "@angular/platform-server": "npm:^18.1.0"
-    "@angular/router": "npm:^18.1.0"
-    "@angular/ssr": "npm:^18.1.0"
-    "@apollo/client": "npm:^3.10.8"
-    "@apollo/server": "npm:^4.10.4"
-    "@graphql-codegen/cli": "npm:^5.0.2"
-    "@graphql-codegen/client-preset": "npm:^4.3.2"
-    "@nestjs/apollo": "npm:^12.2.0"
-    "@nestjs/common": "npm:^10.0.2"
-    "@nestjs/core": "npm:^10.0.2"
-    "@nestjs/graphql": "npm:^12.2.0"
-    "@nestjs/platform-express": "npm:^10.0.2"
-    "@nestjs/schematics": "npm:^10.0.1"
-    "@nestjs/testing": "npm:^10.0.2"
-    "@nx/angular": "npm:19.4.3"
-    "@nx/cypress": "npm:19.4.3"
-    "@nx/devkit": "npm:19.4.3"
-    "@nx/eslint": "npm:19.4.3"
-    "@nx/eslint-plugin": "npm:19.4.3"
-    "@nx/jest": "npm:19.4.3"
-    "@nx/js": "npm:19.4.3"
-    "@nx/nest": "npm:19.4.3"
-    "@nx/node": "npm:19.4.3"
-    "@nx/playwright": "npm:19.4.3"
-    "@nx/react": "npm:^19.4.3"
-    "@nx/vite": "npm:19.4.3"
-    "@nx/web": "npm:19.4.3"
-    "@nx/webpack": "npm:19.4.3"
-    "@playwright/test": "npm:^1.36.0"
-    "@schematics/angular": "npm:^18.1.0"
-    "@swc-node/register": "npm:~1.9.1"
-    "@swc/cli": "npm:~0.3.12"
-    "@swc/core": "npm:~1.5.7"
-    "@swc/helpers": "npm:~0.5.11"
-    "@testing-library/react": "npm:15.0.6"
-    "@types/express": "npm:4.17.14"
-    "@types/jest": "npm:^29.4.0"
-    "@types/node": "npm:18.16.9"
-    "@types/react": "npm:18.3.1"
-    "@types/react-dom": "npm:18.3.0"
-    "@typescript-eslint/eslint-plugin": "npm:^7.3.0"
-    "@typescript-eslint/parser": "npm:^7.3.0"
-    "@typescript-eslint/utils": "npm:^8.0.0-alpha.28"
-    "@vitejs/plugin-react": "npm:^4.2.0"
-    "@vitest/ui": "npm:^1.3.1"
-    axios: "npm:^1.6.0"
-    babel-jest: "npm:^29.4.1"
-    browser-sync: "npm:^3.0.0"
-    cypress: "npm:^13.13.0"
-    eslint: "npm:~8.57.0"
-    eslint-config-prettier: "npm:^9.0.0"
-    eslint-plugin-cypress: "npm:^2.13.4"
-    eslint-plugin-import: "npm:2.27.5"
-    eslint-plugin-jsx-a11y: "npm:6.7.1"
-    eslint-plugin-playwright: "npm:^0.15.3"
-    eslint-plugin-react: "npm:7.32.2"
-    eslint-plugin-react-hooks: "npm:4.6.0"
-    express: "npm:^4.19.2"
-    graphql: "npm:^16.9.0"
-    jest: "npm:^29.4.1"
-    jest-environment-jsdom: "npm:^29.4.1"
-    jest-environment-node: "npm:^29.4.1"
-    jest-preset-angular: "npm:~14.1.0"
-    jsdom: "npm:~22.1.0"
-    nx: "npm:19.4.3"
-    prettier: "npm:^2.6.2"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    reflect-metadata: "npm:^0.1.13"
-    rxjs: "npm:~7.8.0"
-    sass: "npm:^1.55.0"
-    ts-jest: "npm:^29.1.0"
-    ts-node: "npm:10.9.1"
-    tslib: "npm:^2.3.0"
-    typescript: "npm:~5.4.2"
-    vite: "npm:^5.0.0"
-    vitest: "npm:^1.3.1"
-    webpack-cli: "npm:^5.1.4"
-    zone.js: "npm:~0.14.3"
-  languageName: unknown
-  linkType: soft
-
 "@tokenizer/token@npm:^0.3.0":
   version: 0.3.0
   resolution: "@tokenizer/token@npm:0.3.0"
@@ -6368,6 +6505,18 @@ __metadata:
   version: 0.2.0
   resolution: "@trysound/sax@npm:0.2.0"
   checksum: 10c0/44907308549ce775a41c38a815f747009ac45929a45d642b836aa6b0a536e4978d30b8d7d680bbd116e9dd73b7dbe2ef0d1369dcfc2d09e83ba381e485ecbe12
+  languageName: node
+  linkType: hard
+
+"@ts-morph/common@npm:~0.24.0":
+  version: 0.24.0
+  resolution: "@ts-morph/common@npm:0.24.0"
+  dependencies:
+    fast-glob: "npm:^3.3.2"
+    minimatch: "npm:^9.0.4"
+    mkdirp: "npm:^3.0.1"
+    path-browserify: "npm:^1.0.1"
+  checksum: 10c0/37b1fa63aff71f21da9527a460bd33d323f3126de8b80f1f6678733a6150892e7721f4782283e6d6fb6b87769363d6f4fc1f591d5a1c8e66106cedfe3ee667e7
   languageName: node
   linkType: hard
 
@@ -9173,6 +9322,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"code-block-writer@npm:^13.0.1":
+  version: 13.0.1
+  resolution: "code-block-writer@npm:13.0.1"
+  checksum: 10c0/1ca0329032228aab4a8094148bc2b50fd8ff07a0e3f78c11986398951fc51c6bad24bc7236437e639ac95d4c3bb489c2f3c629dc5f21c22a3bca0daa41d64187
+  languageName: node
+  linkType: hard
+
 "collect-v8-coverage@npm:^1.0.0":
   version: 1.0.2
   resolution: "collect-v8-coverage@npm:1.0.2"
@@ -10300,6 +10456,15 @@ __metadata:
   version: 6.1.0
   resolution: "detect-indent@npm:6.1.0"
   checksum: 10c0/dd83cdeda9af219cf77f5e9a0dc31d828c045337386cfb55ce04fad94ba872ee7957336834154f7647b89b899c3c7acc977c57a79b7c776b506240993f97acc7
+  languageName: node
+  linkType: hard
+
+"detect-libc@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "detect-libc@npm:1.0.3"
+  bin:
+    detect-libc: ./bin/detect-libc.js
+  checksum: 10c0/4da0deae9f69e13bc37a0902d78bf7169480004b1fed3c19722d56cff578d16f0e11633b7fbf5fb6249181236c72e90024cbd68f0b9558ae06e281f47326d50d
   languageName: node
   linkType: hard
 
@@ -15691,6 +15856,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mkdirp@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "mkdirp@npm:3.0.1"
+  bin:
+    mkdirp: dist/cjs/src/bin.js
+  checksum: 10c0/9f2b975e9246351f5e3a40dcfac99fcd0baa31fbfab615fe059fb11e51f10e4803c63de1f384c54d656e4db31d000e4767e9ef076a22e12a641357602e31d57d
+  languageName: node
+  linkType: hard
+
 "mlly@npm:^1.4.2, mlly@npm:^1.7.1":
   version: 1.7.1
   resolution: "mlly@npm:1.7.1"
@@ -15900,6 +16074,15 @@ __metadata:
   dependencies:
     node-gyp: "npm:latest"
   checksum: 10c0/d2699c4ad15740fd31482a3b6fca789af7723ab9d393adc6ac45250faaee72edad8f0b10b2b9d087df0de93f1bdc16d97afdd179b26b9ebc9ed68b569faa4bac
+  languageName: node
+  linkType: hard
+
+"node-addon-api@npm:^7.0.0":
+  version: 7.1.1
+  resolution: "node-addon-api@npm:7.1.1"
+  dependencies:
+    node-gyp: "npm:latest"
+  checksum: 10c0/fb32a206276d608037fa1bcd7e9921e177fe992fc610d098aa3128baca3c0050fc1e014fa007e9b3874cf865ddb4f5bd9f43ccb7cbbbe4efaff6a83e920b17e9
   languageName: node
   linkType: hard
 
@@ -16787,6 +16970,13 @@ __metadata:
     no-case: "npm:^3.0.4"
     tslib: "npm:^2.0.3"
   checksum: 10c0/05ff7c344809fd272fc5030ae0ee3da8e4e63f36d47a1e0a4855ca59736254192c5a27b5822ed4bae96e54048eec5f6907713cfcfff7cdf7a464eaf7490786d8
+  languageName: node
+  linkType: hard
+
+"path-browserify@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "path-browserify@npm:1.0.1"
+  checksum: 10c0/8b8c3fd5c66bd340272180590ae4ff139769e9ab79522e2eb82e3d571a89b8117c04147f65ad066dccfb42fcad902e5b7d794b3d35e0fd840491a8ddbedf8c66
   languageName: node
   linkType: hard
 
@@ -20190,6 +20380,16 @@ __metadata:
   version: 2.2.5
   resolution: "ts-log@npm:2.2.5"
   checksum: 10c0/bbc45faa97d47238b896e85e9e0fc12e3d2d72b56755fba305290489532319c83bae82e282b92a5469f432f2dfa365da7ee0469d6d528ce04cd9dd75d4e2a147
+  languageName: node
+  linkType: hard
+
+"ts-morph@npm:^23.0.0":
+  version: 23.0.0
+  resolution: "ts-morph@npm:23.0.0"
+  dependencies:
+    "@ts-morph/common": "npm:~0.24.0"
+    code-block-writer: "npm:^13.0.1"
+  checksum: 10c0/3ac061a3e85b2c7758f7591a73c44b8666488c1615a79c133868d4f5e03a4e73fc855d58ce78c3d5fb605ce14af377353a379fe5ee60fc7b384629f0d2cefc6f
   languageName: node
   linkType: hard
 
