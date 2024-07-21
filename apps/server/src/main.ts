@@ -3,25 +3,32 @@
  * This is only a minimal backend to get started.
  */
 
-import { Logger, ValidationPipe } from '@nestjs/common';
+// import 'reflect-metadata';
+
+import { Logger, NestApplicationOptions } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 
-import { RootModule } from '@botomatic/schematics';
+import { RootModule, UsersResolver } from '@botomatic/schematics';
 import { GraphQLSchemaHost } from '@nestjs/graphql';
 import { printSchema } from 'graphql/index';
 import { join } from 'path';
 import fs from 'fs';
 import * as process from 'node:process';
+import { logger } from 'nx/src/utils/logger';
 
 
-export async function generateSchema() {
-  const app = await NestFactory.create(RootModule);
+export async function generateSchema({ logger: theLogger }: { logger: NestApplicationOptions['logger'] }) {
+  logger.log('Generating schema...');
+  const app = await NestFactory.create(RootModule, {
+    logger: theLogger
+  });
   await app.init(); // Ensure the application is fully initialized
 
   const { schema } = app.get(GraphQLSchemaHost);
   const schemaSDL = printSchema(schema);
 
-  const schemaPath = join(process.cwd(), 'schema.graphql');
+  const at = process.cwd();
+  const schemaPath = join(at, 'schema.graphql');
   fs.writeFileSync(schemaPath, schemaSDL);
 
   await app.close();
@@ -42,14 +49,22 @@ async function bootstrap() {
 }
 
 if (process.argv.includes('--generate-schema')) {
-  generateSchema().then((schemaPath) => {
-    console.log(`Schema generated at: ${schemaPath}`);
+  generateSchema({ logger: ['warn', 'error'] }).then((schemaPath) => {
+    logger.log(`Schema generated at: ${schemaPath}`);
     process.exit(0);
   }).catch((e) => {
-    console.error(e);
+    logger.error(e);
     process.exit(1);
   });
 } else {
-  bootstrap();
+  bootstrap().then(() => {
+    if (process.env.IS_PRODUCTION === 'true') {
+      return;
+    }
+
+    generateSchema({ logger: false }).then((schemaPath) => {
+      logger.log(`Schema generated at: ${schemaPath}`);
+    });
+  });
 }
 

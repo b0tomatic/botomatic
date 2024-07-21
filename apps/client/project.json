@@ -5,13 +5,6 @@
   "projectType": "application",
   "tags": [],
   "targets": {
-    "codegen": {
-      "executor": "nx:run-commands",
-      "options": {
-        "cwd": "./",
-        "command": "graphql-codegen --config apps/client/gql.codegen.ts --watch"
-      }
-    },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],

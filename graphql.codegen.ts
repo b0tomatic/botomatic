@@ -7,14 +7,15 @@ const config: CodegenConfig = {
   generates: {
     'apps/client/src/__generated__/': {
       preset: 'client',
+      documents: ['apps/client/**/*.ts', 'apps/client/**/*.tsx'],
       presetConfig: {
         gqlTagName: 'gql'
       }
     },
-    'apps/server/src/models/': {
+    'apps/server/src/': {
       preset: 'graphql-modules-preset',
       presetConfig: {
-        baseTypesPath: '../generated-types/graphql.ts',
+        baseTypesPath: 'generated-types/graphql.ts',
         filename: 'generated-types/module-types.ts'
       },
       plugins: [

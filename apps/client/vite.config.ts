@@ -19,8 +19,9 @@ export default defineConfig({
     host: 'localhost'
   },
 
-  plugins: [react(),
-    nxViteTsPaths(),
+  plugins: [
+    react(),
+    nxViteTsPaths()
   ],
 
   // Uncomment this if you are using workers.
@@ -38,7 +39,10 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@nestjs/graphql': path.resolve(__dirname, '../../node_modules/@nestjs/graphql/dist/extra/graphql-model-shim')
+      '@nestjs/graphql': path.resolve(
+        __dirname,
+        '../../node_modules/@nestjs/graphql/dist/extra/graphql-model-shim'
+      )
     }
   }
 });
