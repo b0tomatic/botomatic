@@ -29,6 +29,12 @@
         }
       }
     },
+    "build": {
+      "executor": "@nx/vite:build",
+      "configurations": {
+
+      }
+    },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": [

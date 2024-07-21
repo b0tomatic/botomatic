@@ -12,7 +12,7 @@
       ],
       "options": {
         "commands": [
-          "graphql-codegen-esm --config graphql.codegen.ts"
+          "graphql-codegen --config apps/client/graphql.codegen.ts"
         ]
       }
     },

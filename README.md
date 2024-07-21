@@ -5,7 +5,8 @@
 
 envs intellisense & validation (& .env.example), ui libs, prettier & eslint setup, clean package.json,
 polish backend services communication (models, modules, orm, graphql, schemas) - figure it out clearly,
-maybe migrate nestjs from webpack to vite, CI/CD, fill up da docs, choose the right e2e tool (playwright vs cypress)
+maybe migrate nestjs from webpack to vite, CI/CD, fill up da docs, choose the right e2e tool (playwright vs cypress),
+MAYBE replace apollo-client with urlq (?) as it much more light-weighted and performant for heavy apps
 
 
 ## Getting Started

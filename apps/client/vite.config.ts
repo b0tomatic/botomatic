@@ -1,11 +1,10 @@
-/// <reference types='vitest' />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
-import * as path from 'node:path';
-// import checker from 'vite-plugin-checker';
-// import codegen from 'vite-plugin-graphql-codegen';
+import codegen from 'vite-plugin-graphql-codegen';
+import config from './graphql.codegen';
 
+// noinspection JSUnusedGlobalSymbols
 export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/apps/client',
@@ -21,18 +20,9 @@ export default defineConfig({
   },
 
   plugins: [
+    codegen({ config, runOnBuild: true }), // TODO: only in dev
     react(),
-    nxViteTsPaths(),
-    // checker({
-    //   typescript: {
-    //     tsconfigPath: './tsconfig.app.json',
-    //     buildMode: true,
-    //     root: __dirname
-    //   },
-    //   terminal: false,
-    //   overlay: { initialIsOpen: false },
-    //   enableBuild: true
-    // })
+    nxViteTsPaths()
   ],
 
   // Uncomment this if you are using workers.
@@ -47,13 +37,15 @@ export default defineConfig({
     commonjsOptions: {
       transformMixedEsModules: true
     }
-  },
-  resolve: {
-    alias: {
-      '@nestjs/graphql': path.resolve(
-        __dirname,
-        '../../node_modules/@nestjs/graphql/dist/extra/graphql-model-shim'
-      )
-    }
   }
+
+  // doesn't work some why
+  // resolve: {
+  //   alias: {
+  //     '@nestjs/graphql': path.resolve(
+  //       __dirname,
+  //       '../../node_modules/@nestjs/graphql/dist/extra/graphql-model-shim'
+  //     )
+  //   }
+  // }
 });
