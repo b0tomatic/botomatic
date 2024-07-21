@@ -6,20 +6,16 @@
   "tags": [],
   "targets": {
     "schema": {
-      "executor": "@nx/js:node",
+      "executor": "nx:run-commands",
       "defaultConfiguration": "development",
       "options": {
-        "args": ["--generate-schema"],
-        "watch": false
+        "commands": [
+          "nx serve server --watch=false --args=--generate-schema"
+        ]
       },
-      "configurations": {
-        "development": {
-          "buildTarget": "server:build:development"
-        },
-        "production": {
-          "buildTarget": "server:build:production"
-        }
-      }
+      "outputs": [
+        "{projectRoot}/schema.graphql"
+      ]
     },
     "serve": {
       "executor": "@nx/js:node",

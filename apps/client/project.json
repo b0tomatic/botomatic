@@ -5,9 +5,33 @@
   "projectType": "application",
   "tags": [],
   "targets": {
+    "schema": {
+      "executor": "nx:run-commands",
+      "dependsOn": [
+        "server:schema"
+      ],
+      "options": {
+        "commands": [
+          "graphql-codegen-esm --config graphql.codegen.ts"
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nx/vite:build",
+      "options": {
+        "outputPath": "dist/apps/client",
+        "configFile": "apps/client/vite.config.ts",
+        "skipTypeCheck": false
+      },
+      "dependsOn": [
+        "schema"
+      ]
+    },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/client/jest.config.ts"
       }

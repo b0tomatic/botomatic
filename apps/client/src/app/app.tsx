@@ -6,7 +6,7 @@ import { GET_USER, GET_USERS_WITH_EXAMPLE_FIELD } from './app.queries';
 
 export function App() {
   const { data: withExampleField } = useQuery(GetUserWithExampleFieldDocument);
-  const { data: data } = useQuery<GetUserQuery>(GET_USER, {
+  const { data: data } = useQuery(GET_USER, {
     variables: { id: 1 }
   });
 
