@@ -58,7 +58,7 @@ if (process.argv.includes('--generate-schema')) {
   });
 } else {
   bootstrap().then(() => {
-    if (process.env.IS_PRODUCTION === 'true') {
+    if (process.env.NODE_ENV === 'production') {
       return;
     }
 
