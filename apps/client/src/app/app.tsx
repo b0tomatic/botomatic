@@ -1,32 +1,11 @@
 import './app.module.scss';
 
-import NxWelcome from './nx-welcome';
-import { gql, useQuery } from '@apollo/client';
-import { GetUserQuery, GetUserWithExampleFieldQuery, User } from '../__generated__/graphql';
-import { Fragment } from 'react';
-
-const GET_USERS_WITH_EXAMPLE_FIELD = gql`
-  query GetUserWithExampleField {
-    users {
-      firstName
-      lastName
-    }
-  }
-`;
-
-const GET_USER = gql`
-  query GetUser($id: Int!) {
-    user(id: $id) {
-      id
-      firstName
-      lastName
-    }
-  }
-`;
+import { useQuery } from '@apollo/client';
+import { GetUserQuery, GetUserWithExampleFieldDocument, GetUserWithExampleFieldQuery } from '../__generated__/graphql';
+import { GET_USER, GET_USERS_WITH_EXAMPLE_FIELD } from './app.queries';
 
 export function App() {
-  const a = useQuery<T>();
-  const { data: withExampleField } = useQuery<GetUserWithExampleFieldQuery>(GET_USERS_WITH_EXAMPLE_FIELD);
+  const { data: withExampleField } = useQuery(GetUserWithExampleFieldDocument);
   const { data: data } = useQuery<GetUserQuery>(GET_USER, {
     variables: { id: 1 }
   });
@@ -36,7 +15,7 @@ export function App() {
       display: 'flex', flexDirection: 'row', gap: '5px'
     }}>
       {withExampleField?.users.map(({ firstName, lastName }, i) =>
-        <p>{exampleField}</p>
+        <p key={i}>{firstName}</p>
       )}
     </div>
     {data?.user &&

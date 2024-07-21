@@ -3,7 +3,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import * as path from 'node:path';
-import codegen from 'vite-plugin-graphql-codegen';
+import checker from 'vite-plugin-checker';
+// import codegen from 'vite-plugin-graphql-codegen';
 
 export default defineConfig({
   root: __dirname,
@@ -21,7 +22,17 @@ export default defineConfig({
 
   plugins: [
     react(),
-    nxViteTsPaths()
+    nxViteTsPaths(),
+    checker({
+      typescript: {
+        tsconfigPath: './tsconfig.app.json',
+        buildMode: true,
+        root: __dirname
+      },
+      terminal: false,
+      overlay: { initialIsOpen: false },
+      enableBuild: true
+    })
   ],
 
   // Uncomment this if you are using workers.

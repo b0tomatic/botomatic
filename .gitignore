@@ -53,3 +53,7 @@ Thumbs.db
 schema.graphql
 apps/client/src/__generated__
 apps/server/src/generated-types
+
+.env
+.env.test
+.env*.local

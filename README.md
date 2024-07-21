@@ -1,5 +1,11 @@
 # Botomatic
 
+### TODO
+envs intellisense & validation (& .env.example), ui libs, prettier & eslint setup, clean package.json,
+polish backend services communication (models, modules, orm, graphql, schemas) - figure it out clearly,
+maybe migrate nestjs from webpack to vite, CI/CD, fill up da docs
+
+
 ## Getting Started
 - Select the project Node.js version:
 ```shell
