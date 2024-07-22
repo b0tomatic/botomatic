@@ -16,7 +16,9 @@ import fs from 'fs';
 import * as process from 'node:process';
 import { logger } from 'nx/src/utils/logger';
 
-
+// TODO: Divide the schematics library to smaller libs, so for the schema generation I wouldn't use modules,
+//  but the only required parts of it: resolvers, models, DTOs (no impl details like services, etc)
+//  https://docs.nestjs.com/graphql/generating-sdl
 export async function generateSchema({ logger: theLogger }: { logger: NestApplicationOptions['logger'] }) {
   logger.log('Generating schema...');
   const app = await NestFactory.create(RootModule, {

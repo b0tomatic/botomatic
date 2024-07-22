@@ -29,21 +29,6 @@
         }
       }
     },
-    "build": {
-      "defaultConfiguration": "development",
-      "configurations": {
-        "development": {
-          "args": [
-            "--node-env=development"
-          ]
-        },
-        "production": {
-          "args": [
-            "--node-env=production"
-          ]
-        }
-      }
-    },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": [

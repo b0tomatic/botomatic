@@ -1,7 +1,32 @@
-import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql';
+import { Resolver, Query, Mutation, Args, Int, ObjectType, ID, Field } from '@nestjs/graphql';
 import { UsersService } from './users.service';
 import { User } from './entities';
 import { UpdateUserInput, CreateUserInput } from './dto';
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+
+@ObjectType()
+export class Post {
+  @Field(returns => Int, { nullable: true })
+  id?: number;
+}
+
+@Resolver(() => Post)
+export class PostsResolver {
+  @Query(() => [Post], { name: 'posts' })
+  findAll() {
+    return [{
+      id: 100
+    }]
+  }
+}
+
+@Module({
+  imports: [],
+  providers: [PostsResolver]
+})
+export class PostsModule {
+}
 
 @Resolver(() => User)
 export class UsersResolver {

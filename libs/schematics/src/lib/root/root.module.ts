@@ -4,23 +4,20 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
-import { User, UsersModule } from '../users';
+import { PostsModule, User, UsersModule } from '../users';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'node:path';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
+      type: 'better-sqlite3', // process.env.DATABASE_TYPE as 'better-sqlite3' | 'mysql',
+      // host: process.env.DATABASE_HOST,
+      // port: process.env.DATABASE_PORT as unknown as number,
+      // username: process.env.DATABASE_USERNAME,
+      database: './db.sqlite3', // process.env.DATABASE_NAME,
       // password: 'root',
-      database: 'test',
 
-      // type: 'better-sqlite3',
-      // database: './db.sqlite3',
-      // entities: [User],
       entities: [
         join(__dirname, '../../', '**/*.entity{.ts,.js}')
       ],
@@ -35,7 +32,8 @@ import { join } from 'node:path';
       // playground: true,
       // plugins: [ApolloServerPluginLandingPageLocalDefault()]
     }),
-    UsersModule
+    UsersModule,
+    PostsModule
   ]
 })
 export class RootModule {

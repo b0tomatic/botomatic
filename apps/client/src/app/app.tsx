@@ -5,7 +5,7 @@ import { GetUserQuery, GetUserWithExampleFieldDocument, GetUserWithExampleFieldQ
 import { GET_USER, GET_USERS_WITH_EXAMPLE_FIELD } from './app.queries';
 
 export function App() {
-  const { data: withExampleField } = useQuery(GetUserWithExampleFieldDocument);
+  const { data: withExampleField } = useQuery<GetUserWithExampleFieldQuery>(GET_USERS_WITH_EXAMPLE_FIELD);
   const { data: data } = useQuery(GET_USER, {
     variables: { id: 1 }
   });
@@ -14,7 +14,7 @@ export function App() {
     <div style={{
       display: 'flex', flexDirection: 'row', gap: '5px'
     }}>
-      {withExampleField?.users.map(({ firstName, lastName }, i) =>
+      {withExampleField?.users.map(({ firstName }, i) =>
         <p key={i}>{firstName}</p>
       )}
     </div>
