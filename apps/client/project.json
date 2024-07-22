@@ -11,8 +11,9 @@
         "server:schema"
       ],
       "options": {
+        "cwd": "apps/client",
         "commands": [
-          "graphql-codegen --config apps/client/graphql.codegen.ts"
+          "graphql-codegen --config graphql.codegen.ts"
         ]
       }
     },

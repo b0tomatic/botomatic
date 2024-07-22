@@ -1,0 +1,33 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js environment using nvm
+        run: |
+          export NVM_DIR="$HOME/.nvm"
+          mkdir -p $NVM_DIR
+          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+          . $NVM_DIR/nvm.sh
+          nvm install
+          nvm use
+          node -v
+        shell: bash
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Build the project
+        run: yarn build

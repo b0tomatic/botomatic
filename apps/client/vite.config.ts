@@ -4,6 +4,7 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import codegen from 'vite-plugin-graphql-codegen';
 import config from './graphql.codegen';
 
+const isProduction = process.env.NODE_ENV === 'production';
 // noinspection JSUnusedGlobalSymbols
 export default defineConfig({
   root: __dirname,
@@ -20,7 +21,12 @@ export default defineConfig({
   },
 
   plugins: [
-    codegen({ config, runOnBuild: true }), // TODO: only in dev
+    ...(!isProduction ? [
+      codegen({
+        config,
+        runOnBuild: true
+      })
+    ] : []),
     react(),
     nxViteTsPaths()
   ],
