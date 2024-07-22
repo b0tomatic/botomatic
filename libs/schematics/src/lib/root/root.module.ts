@@ -22,7 +22,8 @@ import { join } from 'node:path';
         join(__dirname, '../../', '**/*.entity{.ts,.js}')
       ],
       autoLoadEntities: true,
-      synchronize: true
+      synchronize: false,
+      logging: true
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,

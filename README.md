@@ -1,5 +1,7 @@
 # Botomatic
 
+[Miro Board](https://miro.com/app/board/uXjVKzd5qLo=/)
+
 ### TODO
 
 tg mini-apps research, database design, dockerize
@@ -7,20 +9,43 @@ tg mini-apps research, database design, dockerize
 envs intellisense & validation (& .env.example), ui libs, prettier & eslint setup, clean package.json,
 polish backend services communication (models, modules, orm, graphql, schemas) - figure it out clearly,
 maybe migrate nestjs from webpack to vite, CI/CD, fill up da docs, choose the right e2e tool (playwright vs cypress),
-MAYBE replace apollo-client with urlq (?) as it much more light-weighted and performant for heavy apps
+MAYBE replace apollo-client with urlq (?) as it much more light-weighted and performant for heavy apps,
+logging, middlewares, auth, server (fastify/express)
 
-[Miro Board](https://miro.com/app/board/uXjVKzd5qLo=/)
+for docs:
+
+- as if we'd choose schema first approach, we'd need to generate our graphql code on the backend too, but in the chosen already case, we ain't need to do so. that means that no code generation is needed for the backend or its modules, so it only remains for the frontend, which also means that we can move the code generator to the front-end only part. or leave it as it is but used only for front end
+
+- we don't generate code for mutations from schema at the backend as we use the code first approach, so it comes to the schema and if we generate sum, that's only the front end code of queries, mutations, etc, for type safe fields usage
+
+- The graphql schema is generated either at the every start/rebuild of the nest app or manually when the app is turned off by build or schema command. The front-end gql code is generated after the server schema, always automatically when the whole app is being built or just the client. But building the client code requires schema generation, and that requires server app building.
+
+Stack:
+
+- nest
+- graphql.org (the-guild.dev)
+- typeorm
+- react
+
+- vite
+- nx
 
 ## Getting Started
+
 - Select the project Node.js version:
+
 ```shell
 nvm use # Sets the version from .nvmrc file
 ```
+
 - Switch to the latest Yarn version by:
+
 ```shell
 corepack enable
 ```
+
 - Install dependencies:
+
 ```shell
 yarn
 ```
