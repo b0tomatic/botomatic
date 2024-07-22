@@ -4,23 +4,34 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
-import { PostsModule, User, UsersModule } from '../users';
+import { UsersModule } from '../users';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'node:path';
+import { PostsModule } from '@botomatic/resolvers';
+import * as process from 'node:process';
+
+const IS_CI = process.env.IS_CI === 'true';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'better-sqlite3', // process.env.DATABASE_TYPE as 'better-sqlite3' | 'mysql',
-      // host: process.env.DATABASE_HOST,
-      // port: process.env.DATABASE_PORT as unknown as number,
-      // username: process.env.DATABASE_USERNAME,
-      database: './db.sqlite3', // process.env.DATABASE_NAME,
+    // https://stackoverflow.com/questions/55366037/inject-typeorm-repository-into-nestjs-service-for-mock-data-testing
+    TypeOrmModule.forRoot(IS_CI ? {
+      type: 'better-sqlite3',
+      database: ':memory:',
+
+      entities: [join(__dirname, '../../', '**/*.entity{.ts,.js}')],
+      autoLoadEntities: true,
+      synchronize: false,
+      logging: true
+    } : {
+      type: 'mysql', // 'better-sqlite3',
+      host: process.env.MYSQL_HOST,
+      port: process.env.MYSQL_PORT as unknown as number,
+      username: process.env.MYSQL_USERNAME,
+      database: process.env.MYSQL_NAME, // './db.sqlite3',
       // password: 'root',
 
-      entities: [
-        join(__dirname, '../../', '**/*.entity{.ts,.js}')
-      ],
+      entities: [join(__dirname, '../../', '**/*.entity{.ts,.js}')],
       autoLoadEntities: true,
       synchronize: false,
       logging: true
@@ -40,6 +51,5 @@ import { join } from 'node:path';
 })
 export class RootModule {
   constructor(private dataSource: DataSource) {
-
   }
 }

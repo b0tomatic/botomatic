@@ -1,9 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { CreateUserInput } from './dto';
-import { UpdateUserInput } from './dto';
 import { InjectRepository } from '@nestjs/typeorm';
-import { User } from './entities';
 import { Repository } from 'typeorm';
+import { CreateUserInput, UpdateUserInput, User } from '@botomatic/entities';
 
 @Injectable()
 export class UsersService {

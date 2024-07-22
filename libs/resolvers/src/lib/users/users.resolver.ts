@@ -1,9 +1,8 @@
 import { Resolver, Query, Mutation, Args, Int, ObjectType, ID, Field } from '@nestjs/graphql';
-import { UsersService } from './users.service';
-import { User } from './entities';
-import { UpdateUserInput, CreateUserInput } from './dto';
+import { User } from '@botomatic/entities';
+import { UpdateUserInput, CreateUserInput } from '@botomatic/entities';
+import { UsersService } from '@botomatic/services';
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
 
 @ObjectType()
 export class Post {
@@ -17,7 +16,7 @@ export class PostsResolver {
   findAll() {
     return [{
       id: 100
-    }]
+    }];
   }
 }
 

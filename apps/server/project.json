@@ -9,6 +9,9 @@
       "executor": "nx:run-commands",
       "defaultConfiguration": "development",
       "options": {
+        "env": {
+          "IS_CI": "true"
+        },
         "commands": [
           "nx serve server --watch=false --args=--generate-schema"
         ]
