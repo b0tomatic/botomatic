@@ -27,7 +27,8 @@ import { join } from 'node:path';
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: true, // process.env.NODE_ENV === 'production' || join(__dirname, 'assets/schema.graphql')
-      sortSchema: true
+      sortSchema: true,
+      introspection: process.env.NODE_ENV !== 'production'
 
       // playground: true,
       // plugins: [ApolloServerPluginLandingPageLocalDefault()]
