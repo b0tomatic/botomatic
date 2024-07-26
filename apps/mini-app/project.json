@@ -1,0 +1,24 @@
+{
+  "name": "mini-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/mini-app/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "options": {
+        "outputPath": "dist/apps/mini-app",
+        "configFile": "apps/mini-app/vite.config.ts",
+        "skipTypeCheck": false
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/mini-app/jest.config.ts"
+      }
+    }
+  }
+}
